@@ -3,7 +3,7 @@ import { join, __dirname } from "./utils/index.js";
 import productRoutes from "./routes/product.route.js";
 import bodyParser from "body-parser";
 import authRoutes from "./routes/auth.routes.js";
-
+import cors from 'cors';
 
 
 //settings
@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 
 
 app.use(bodyParser.json());
+
+//cors
+app.use(cors());
  
 
 //routes
